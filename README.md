@@ -82,9 +82,9 @@ The API will be available at `http://localhost:3000` (or your specified PORT).
 | `EMAIL_USER` | Gmail address for sending emails | Yes |
 | `EMAIL_PASS` | Gmail App Password | Yes |
 
- Key Features
+### Key Features
 
- Advanced Security
+ **Advanced Security**
 
 Data Encryption: Passwords hashed using bcryptjs and OTPs secured via HMAC-SHA256.
 
@@ -94,7 +94,7 @@ Secure Authentication: Stateless authentication using JSON Web Tokens (JWT) stor
 
 Input Validation: Strict request payload validation using Joi schemas.
 
- User Management
+ **User Management**
 
 Email Verification: Account activation via 6-digit OTP sent using Nodemailer (Gmail SMTP).
 
@@ -102,7 +102,7 @@ Password Reset Flow: Secure "Forgot Password" functionality with timed expiratio
 
 Role-Based Access: Middleware to protect routes and ensure only authorized users can modify their data.
 
- Content Management (CRUD)
+ **Content Management (CRUD)**
 
 Post Operations: Create, Read, Update, and Delete blog posts.
 
@@ -111,7 +111,7 @@ Pagination: Optimized GET requests with page-based pagination for scalability.
 Ownership Checks: Logic to prevent users from deleting/editing posts they didn't create.
 
 
- Tech Stack
+ ### Tech Stack
 
 Runtime Environment: Node.js
 
@@ -128,7 +128,7 @@ Cryptography: Bcryptjs & Node Crypto (HMAC)
 Email Service: Nodemailer
 
 
- Project Architecture-
+ ### Project Architecture-
 
 CRUD/
 
@@ -185,9 +185,9 @@ CRUD/
 └── package-lock.json
 
 
- API Endpoints-
+### API Endpoints-
 
- Authentication:
+ **Authentication:**
 
 POST /api/auth/signup - Register a new user
 
@@ -206,7 +206,7 @@ PATCH /api/auth/send-forget-password-code - Send Forgot Password OTP
 PATCH /api/auth/verify-forget-password-code - Reset Password
 
 
- Posts:
+ **Posts:**
 
 GET /api/posts/all-posts - Get all posts (Paginated)
 
@@ -219,7 +219,7 @@ PUT /api/posts/update-post - Update a post
 DELETE /api/posts/delete-post - Delete a post
 
 
- Security Implementation Details
+ ### Security Implementation Details
 
 Hashing Strategy:
 1. Utilized bcryptjs for password hashing with a salt round of 12. For verification codes (OTP),
